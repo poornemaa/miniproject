@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Food Waste Management</a>
+    <button class="btn btn-outline-light" id="logoutBtn">Logout</button>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2 id="welcomeText" class="text-center mb-4"></h2>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-3">
+      <a href="add-donation.html" id="addDonationBtn" class="btn btn-primary w-100">Add Donation</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="view-donations.html" class="btn btn-success w-100">View Donations</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="orders.html" class="btn btn-warning w-100">View Orders</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="certifications.html" id="certificationsBtn" class="btn btn-info w-100">View Certifications</a>
+    </div>
+  </div>
+
+  <h4 class="mt-5">Notifications</h4>
+  <ul id="notificationsList" class="list-group"></ul>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/notification.js"></script>
+
+</body>
+</html>
